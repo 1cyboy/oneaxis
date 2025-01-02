@@ -25,7 +25,7 @@ int MPU6050::I2C_WriteRegister(unsigned char slave_addr, unsigned char reg_addr,
     return status;
 }
 
-int MPU6050::I2C_ReadRegister(unsigned char slave_addr, unsigned char reg_addr, unsigned short len, unsigned char *data_ptr)
+/*int MPU6050::I2C_ReadRegister(unsigned char slave_addr, unsigned char reg_addr, unsigned short len, unsigned char *data_ptr)
 {
     HAL_StatusTypeDef status = HAL_OK;
     status = HAL_I2C_Mem_Read(&I2C_Handle, slave_addr, reg_addr, I2C_MEMADD_SIZE_8BIT, data_ptr, len, I2Cx_FLAG_TIMEOUT);

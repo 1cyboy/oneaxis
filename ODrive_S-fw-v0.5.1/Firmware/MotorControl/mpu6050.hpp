@@ -377,9 +377,9 @@ public:
     void MPU6050_ReadData(uint8_t reg_add,unsigned char*Read,uint8_t num);
     void MPU6050_WriteReg(uint8_t reg_add,uint8_t reg_dat);
     */
-
     int I2C_WriteRegister(unsigned char slave_addr,unsigned char reg_addr,unsigned short len,unsigned char *data_ptr);
-    int I2C_SReadRegister(unsigned char slave_addr,unsigned char reg_addr,unsigned short len,unsigned char *data_ptr);
+    //int I2C_SReadRegister(unsigned char slave_addr,unsigned char reg_addr,unsigned short len,unsigned char *data_ptr);
+};
 
 
 #endif  /*__MPU6050*/

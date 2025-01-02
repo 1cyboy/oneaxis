@@ -211,7 +211,7 @@ extern "C" int construct_objects(){
 
 extern "C" {
 int odrive_main(void);
-void vApplicationStackOverflowHook(xTaskHa ndle *pxTask, signed portCHAR *pcTaskName) {
+void vApplicationStackOverflowHook(xTaskHandle *pxTask, signed portCHAR *pcTaskName) {
     for(auto& axis : axes){
         safety_critical_disarm_motor_pwm(axis->motor_);
     }

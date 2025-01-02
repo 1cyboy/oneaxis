@@ -198,6 +198,7 @@ build{
         'MotorControl/sensorless_estimator.cpp',
         'MotorControl/trapTraj.cpp',
         'MotorControl/main.cpp',
+        'MotorControl/mpu6050.cpp',
         'communication/can_simple.cpp',
         'communication/communication.cpp',
         'communication/ascii_protocol.cpp',
