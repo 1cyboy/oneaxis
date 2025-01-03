@@ -5,6 +5,7 @@
 #include "i2c.h"
 
 // MPU6050, Standard address 0x68
+#define MPU6050
 #define MPU6050_ADDRESS         0x68<<1
 #define MPU6050_WHO_AM_I        0x75
 #define MPU6050_SMPLRT_DIV      0  //8000Hz
@@ -365,20 +366,24 @@
 #define MPU6050_DMP_MEMORY_BANKS        8
 #define MPU6050_DMP_MEMORY_BANK_SIZE    256
 #define MPU6050_DMP_MEMORY_CHUNK_SIZE   16
+#define q30  1073741824.0f
 
-class MPU6050 : public ODriveIntf {
+
+
+
+class ODrive::MPU6050_DMP{
 public:
-    /*void MPU6050ReadTemp(short *tempData);
+    int I2C_WriteRegister(unsigned char slave_addr,unsigned char reg_addr,unsigned short len,unsigned char *data_ptr);
+    int I2C_ReadRegister(unsigned char slave_addr,unsigned char reg_addr,unsigned short len,unsigned char *data_ptr);
+    void MPU6050ReadTemp(short *tempData);
     void MPU6050ReadGyro(short *gyroData);
     void MPU6050ReadAcc(short *accData);
     void MPU6050_ReturnTemp(float*Temperature);
     void MPU6050_Init(void);
-    uint8_t MPU6050ReadID(void);
     void MPU6050_ReadData(uint8_t reg_add,unsigned char*Read,uint8_t num);
     void MPU6050_WriteReg(uint8_t reg_add,uint8_t reg_dat);
-    */
-    int I2C_WriteRegister(unsigned char slave_addr,unsigned char reg_addr,unsigned short len,unsigned char *data_ptr);
-    //int I2C_SReadRegister(unsigned char slave_addr,unsigned char reg_addr,unsigned short len,unsigned char *data_ptr);
+    uint8_t mpu_get_data(float *pitch,float *roll,float *yaw);
+    
 };
 
 

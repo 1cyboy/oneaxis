@@ -62,7 +62,11 @@
 			"iomanip": "cpp",
 			"optional": "cpp",
 			"sstream": "cpp",
-			"utils.h": "c"
+			"utils.h": "c",
+			"stdio.h": "c",
+			"mpu6050.hpp": "c",
+			"odrive_main.h": "c",
+			"bsp_mpu6050_dmp.h": "c"
 		}
 	}
 }

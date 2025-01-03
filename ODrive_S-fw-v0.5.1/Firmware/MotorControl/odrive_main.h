@@ -241,7 +241,7 @@ public:
         static int cnt = 0;
         return cnt += delta;
     }
-
+    class MPU6050_DMP;
     Axis& get_axis(int num) { return *axes[num]; }
     ODriveCAN& get_can() { return *odCAN; }
 
